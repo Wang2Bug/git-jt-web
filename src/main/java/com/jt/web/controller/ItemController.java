@@ -21,6 +21,7 @@ public class ItemController
 	@RequestMapping("/{itemId}")
 	public String findItemById(@PathVariable Long itemId,Model model) //PathVariable:变量路径.....
 	{
+		//商品基本信息
 		Item item = itemService.findItemById(itemId);
 		model.addAttribute("item", item);//Attribute：属性
 		
